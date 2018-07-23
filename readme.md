@@ -29,22 +29,24 @@ $ ./lib/bs/native/test.native
     * ppx compile time execution, code generation
   * Type inference - types never get in the way
   * Exceptions
-* Good tools & ecosystem
+* Old language, solid ecosystem
   * Debugging
   * Build tools
   * libraries
-* Opam is like python, global
+* Opam is like python, everything is global
 * Compiles to javascript but not to WASM
   * No significant performance gain over well written JS
 * Single threaded - can have threads but uses a GIL
-* ReasonML is not designed for native builds, it's designed to be a TypeScript competitor
-  * Not (yet?) a serious nodejs replacement
-* ReasomML build scripts leave something to be desired
-  * Bucklescript-native
+* ReasonML build scripts leave something to be desired
+  * Bucklescript native
     * Builder we're using here, requires switching to specific version of ocaml to use
+    * Not documented, I needed to ask with a reasonably cryptic error message to learn this
   * esy - couldn't get this to work
     * `esy init` does not make a fresh package.json
     * Attempts to do a virtual-env, and so it compiles ocaml which takes a few minutes
   * Using vscode, merlin created too many processes, got resource limit errors, had to killall
-
-  
+* ReasonML is not intended by it's big users FB, Bloomberg to be used for native builds, it's
+designed to be a TypeScript competitor
+  * Until there's wasm compilation, this is unlikely to change
+  * Unlikely to see much in the way of serverside/command line tools for a while
+  * Not (yet?) a serious nodejs replacement
