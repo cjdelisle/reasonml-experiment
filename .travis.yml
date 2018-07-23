@@ -4,9 +4,12 @@ node_js:
 addons:
   apt:
     sources:
+      - ppa:avsm/ppa
     packages:
+      - ocaml
+      - ocaml-native-compilers
+      - camlp4-extra
       - opam
-      - ocaml-nox
 before_script:
   - opam init
   - opam switch 4.02.3+buckle-master
