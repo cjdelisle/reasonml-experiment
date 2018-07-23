@@ -8,13 +8,16 @@ const main = () => {
         if (err) { throw err; }
         console.log('UDP message sent to ' + HOST +':'+ PORT);
     });
-    cli.on('message', (message, remote) => {
-        console.log('Received: ' + remote.address + ':' + remote.port +' - ' + message);
-        if (message.toString('utf8') === 'Hello World') { cli.close(); }
-    });
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
         console.log("Failed");
         process.exit(100);
     }, 1000);
+    cli.on('message', (message, remote) => {
+        console.log('Received: ' + remote.address + ':' + remote.port +' - ' + message);
+        if (message.toString('utf8') === 'Hello World') {
+            cli.close();
+            clearTimeout(timeout);
+        }
+    });
 };
 main();
