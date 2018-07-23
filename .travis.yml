@@ -14,8 +14,7 @@ before_script:
   - opam init --auto-setup
   - opam switch 4.02.3+buckle-master
   - eval `opam config env`
-  - opam install ocamlfind lwt uwt reason
-  - npm install
+  - opam install -y ocamlfind lwt uwt reason
   - npm run build
   - ./lib/bs/native/test.native &
 script:

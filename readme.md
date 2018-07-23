@@ -29,6 +29,8 @@ $ ./lib/bs/native/test.native
     * ppx compile time execution, code generation
   * Type inference - types never get in the way
   * Exceptions
+  * I didn't test this but it seems that implementing [nthen](https://github.com/cjdelisle/nthen)
+  is possible.
 * Old language, solid ecosystem
   * Debugging
   * Build tools
