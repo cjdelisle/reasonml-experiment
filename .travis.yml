@@ -6,6 +6,7 @@ addons:
     sources:
     packages:
       - opam
+      - ocaml-nox
 before_script:
   - opam init
   - opam switch 4.02.3+buckle-master
