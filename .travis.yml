@@ -4,7 +4,7 @@ node_js:
 addons:
   apt:
     sources:
-      - ppa:avsm/ppa
+      - avsm
     packages:
       - ocaml
       - ocaml-native-compilers
