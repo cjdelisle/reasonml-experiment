@@ -1,0 +1,12 @@
+{
+    "name" : "NameOfLibrary",
+    "sources" : ".",
+    "ocamlfind-dependencies": [
+        "lwt.unix",
+        "uwt"
+    ],
+    "entries": [{
+      "backend": "native",
+      "main-module": "Test"
+    }]
+  }

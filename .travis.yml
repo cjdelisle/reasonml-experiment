@@ -1,0 +1,16 @@
+language: node_js
+addons:
+  apt:
+    sources:
+    packages:
+    - opam
+    - npm
+before_script:
+  - opam switch 4.02.3+buckle-master
+  - eval `opam config env`
+  - opam install ocamlfind lwt uwt reason
+  - npm install
+  - npm run build
+  - ./lib/bs/native/test.native &
+script:
+  - node ./test.js
