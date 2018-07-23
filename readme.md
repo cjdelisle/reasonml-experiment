@@ -1,5 +1,7 @@
 # ReasonML experiment
 
+[![Build Status](https://travis-ci.org/cjdelisle/reasonml-experiment.svg?branch=master)](https://travis-ci.org/cjdelisle/reasonml-experiment)
+
 To make this thing work:
 
 ```bash
