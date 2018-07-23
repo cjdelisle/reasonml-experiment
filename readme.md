@@ -22,6 +22,7 @@ $ ./lib/bs/native/test.native
   * Hello world is 100k
 * It's not JS, there *is* a learning curve
   * It's not immediately obvious when a function is being defined
+  * Extension operators such as `|>` make additional cognitive load
   * Syntax extensions add new operators which do special things, these remain popular in OCaml world
   * You probably end up learning OCaml in order to read the examples from libraries you want to use
 * It's a super powerful language
@@ -52,3 +53,13 @@ designed to be a TypeScript competitor
   * Until there's wasm compilation, this is unlikely to change
   * Unlikely to see much in the way of serverside/command line tools for a while
   * Not (yet?) a serious nodejs replacement
+
+## Conclusion
+
+ReasonML/OCaml is not yet ready to become the next nodejs, but it could be if a business
+decided to invest the necessary resources into making:
+1. A single standard process for building
+2. A standard library which makes creating a server as easy as in node (do not underestimate,
+need a senior API designer)
+3. refmt should convert (often complex/intimidating) ocaml to a more beginner-oriented ReasonML,
+it need not be one-to-one.
