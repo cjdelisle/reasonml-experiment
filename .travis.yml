@@ -5,9 +5,9 @@ addons:
   apt:
     sources:
     packages:
-    - opam
-    - npm
+      - opam
 before_script:
+  - opam init
   - opam switch 4.02.3+buckle-master
   - eval `opam config env`
   - opam install ocamlfind lwt uwt reason

@@ -6,6 +6,7 @@ To make this thing work:
 
 ```bash
 $ brew install opam # if on OSX
+$ opam init
 $ opam switch 4.02.3+buckle-master
 $ eval `opam config env`
 $ opam install ocamlfind lwt uwt reason
